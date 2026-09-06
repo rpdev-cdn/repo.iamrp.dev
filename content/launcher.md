@@ -3,13 +3,13 @@ title: "RPDev Launcher Module Registry"
 description: "Central package registry, module catalog, and JSON schema index for RPDev Launcher and RPDev Feed."
 ---
 
-# RPDev Launcher Module Registry (`repo.launcher.iamrp.dev`)
+# RPDev Launcher Module Registry (`launcher.repo.iamrp.dev`)
 
 The **RPDev Launcher Module Registry** is the central distribution hub and API endpoint provider for the Android 120Hz workstation ecosystem.
 
-- **Portal URL**: **[`https://repo.launcher.iamrp.dev/`](https://repo.launcher.iamrp.dev/)**
-- **Catalog Manifest**: [`https://repo.launcher.iamrp.dev/catalog/modules.json`](https://repo.launcher.iamrp.dev/catalog/modules.json)
-- **Card Schema**: [`https://repo.launcher.iamrp.dev/schemas/card-v1.schema.json`](https://repo.launcher.iamrp.dev/schemas/card-v1.schema.json)
+- **Portal URL**: **[`https://launcher.repo.iamrp.dev/`](https://launcher.repo.iamrp.dev/)**
+- **Catalog Manifest**: [`https://launcher.repo.iamrp.dev/catalog/modules.json`](https://launcher.repo.iamrp.dev/catalog/modules.json)
+- **Card Schema**: [`https://launcher.repo.iamrp.dev/schemas/card-v1.schema.json`](https://launcher.repo.iamrp.dev/schemas/card-v1.schema.json)
 
 ---
 

@@ -17,7 +17,7 @@ graph TD
         B --> K[kodi.repo.iamrp.dev<br><i>Kodi Add-on Repository</i>]
         B --> O[openwrt.repo.iamrp.dev<br><i>OPKG & APK v3 Feed</i>]
         B --> F[firefox.repo.iamrp.dev<br><i>Mozilla MV3 Add-ons</i>]
-        B --> L[repo.launcher.iamrp.dev<br><i>Launcher Modules & Schemas</i>]
+        B --> L[launcher.repo.iamrp.dev<br><i>Launcher Modules & Schemas</i>]
         B --> C[cdn.iamrp.dev<br><i>Edge Binaries & Assets</i>]
     end
     
@@ -37,7 +37,7 @@ graph TD
 | **[[kodi|Kodi Add-ons]]** | **[`kodi.repo.iamrp.dev`](https://kodi.repo.iamrp.dev/)** | `.zip` | `addons.xml`, `addons.xml.md5`, `repository.rpdevs-*.zip` | **Active** |
 | **[[openwrt|OpenWrt Custom Feed]]** | **[`openwrt.repo.iamrp.dev`](https://openwrt.repo.iamrp.dev/)** | `.ipk` / `.apk` | `Packages.gz` (OPKG), `APKINDEX.tar.gz` (APK v3), `luci-app-nfs` | **Active** |
 | **[[firefox|Firefox Privacy Add-ons]]** | **[`firefox.repo.iamrp.dev`](https://firefox.repo.iamrp.dev/)** | `.xpi` | `updates.json`, DNS Forge, SHA-256 binary manifests | **Active** |
-| **[[launcher|RPDev Launcher Registry]]** | **[`repo.launcher.iamrp.dev`](https://repo.launcher.iamrp.dev/)** | `.json` / `.apk` | `modules.json`, Hub Card JSON Schemas, APK releases | **Active** |
+| **[[launcher|RPDev Launcher Registry]]** | **[`launcher.repo.iamrp.dev`](https://launcher.repo.iamrp.dev/)** | `.json` / `.apk` | `modules.json`, Hub Card JSON Schemas, APK releases | **Active** |
 | **[[cdn|Edge Delivery Gateway]]** | **[`cdn.iamrp.dev`](https://cdn.iamrp.dev/)** | Static Assets | JetBrains Mono fonts, security policies, raw assets | **Active** |
 
 ---
