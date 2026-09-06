@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPDev Repository Hub — Sovereign Package Distribution</title>
+    <style>
+        :root {
+            --bg: #090d13;
+            --surface: #161b22;
+            --surface-hover: #1f242c;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --heading: #f0f6fc;
+            --accent: #58a6ff;
+            --accent-hover: #1f6feb;
+            --badge-kodi: #2b7489;
+            --badge-openwrt: #00758f;
+            --badge-firefox: #e66000;
+            --badge-android: #3ddc84;
+            --badge-cdn: #8957e5;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 3rem 1.5rem;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 960px;
+            width: 100%;
+        }
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+        h1 {
+            color: var(--heading);
+            font-size: 2.4rem;
+            margin: 0 0 0.75rem 0;
+            letter-spacing: -0.02em;
+        }
+        p.subtitle {
+            margin: 0 auto;
+            max-width: 680px;
+            color: #8b949e;
+            font-size: 1.15rem;
+            line-height: 1.5;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+            background: var(--surface-hover);
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .card-icon {
+            font-size: 2.2rem;
+        }
+        .badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.6rem;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #fff;
+        }
+        .badge-kodi { background-color: var(--badge-kodi); }
+        .badge-openwrt { background-color: var(--badge-openwrt); }
+        .badge-firefox { background-color: var(--badge-firefox); }
+        .badge-android { background-color: var(--badge-android); color: #000; }
+        .badge-cdn { background-color: var(--badge-cdn); }
+
+        .card h2 {
+            margin: 0 0 0.5rem 0;
+            color: var(--heading);
+            font-size: 1.35rem;
+        }
+        .card p {
+            margin: 0 0 1.25rem 0;
+            color: #8b949e;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+        .endpoint-pill {
+            background: #0d1117;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 0.4rem 0.75rem;
+            font-family: "JetBrains Mono", ui-monospace, monospace;
+            font-size: 0.8rem;
+            color: #79c0ff;
+            word-break: break-all;
+        }
+        .action-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #8b949e;
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
+        }
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📦 RPDev Repository Hub</h1>
+            <p class="subtitle">Unified package repository and installation ingress across the RPDev sovereign ecosystem. Direct distribution for Kodi, OpenWrt, Firefox, Android, and Edge CDN.</p>
+        </header>
+
+        <div class="grid">
+            <!-- Kodi Repo -->
+            <a href="https://kodi.repo.iamrp.dev" class="card">
+                <div>
+                    <div class="card-header">
+                        <span class="card-icon">📺</span>
+                        <span class="badge badge-kodi">Kodi Add-ons</span>
+                    </div>
+                    <h2>kodi.repo.iamrp.dev</h2>
+                    <p>Official Kodi File Manager source and add-on repository hosting first-party streaming resolvers, anime scrapers, and <code>addons.xml</code> manifests.</p>
+                </div>
+                <div>
+                    <div class="endpoint-pill">https://kodi.repo.iamrp.dev/</div>
+                    <div class="action-link">Open Kodi Repository &rarr;</div>
+                </div>
+            </a>
+
+            <!-- OpenWrt Repo -->
+            <a href="https://openwrt.repo.iamrp.dev" class="card">
+                <div>
+                    <div class="card-header">
+                        <span class="card-icon">🛡️</span>
+                        <span class="badge badge-openwrt">OpenWrt Feed</span>
+                    </div>
+                    <h2>openwrt.repo.iamrp.dev</h2>
+                    <p>Custom OPKG and APK v3 router package feed hosting kernel storage drivers (<code>luci-app-nfs</code>), DNS sinkholes, and pre-compiled router utilities.</p>
+                </div>
+                <div>
+                    <div class="endpoint-pill">/etc/opkg/customfeeds.conf</div>
+                    <div class="action-link">Open Package Feed &rarr;</div>
+                </div>
+            </a>
+
+            <!-- Firefox Repo -->
+            <a href="https://firefox.repo.iamrp.dev" class="card">
+                <div>
+                    <div class="card-header">
+                        <span class="card-icon">🦊</span>
+                        <span class="badge badge-firefox">Firefox Add-ons</span>
+                    </div>
+                    <h2>firefox.repo.iamrp.dev</h2>
+                    <p>Self-hosted distribution portal and Mozilla auto-update manifest endpoint for privacy extensions like <strong>DNS Forge</strong> (NextDNS controller).</p>
+                </div>
+                <div>
+                    <div class="endpoint-pill">/updates.json</div>
+                    <div class="action-link">Open Extension Portal &rarr;</div>
+                </div>
+            </a>
+
+            <!-- Launcher Modules Repo -->
+            <a href="https://repo.launcher.iamrp.dev" class="card">
+                <div>
+                    <div class="card-header">
+                        <span class="card-icon">📱</span>
+                        <span class="badge badge-android">Launcher Modules</span>
+                    </div>
+                    <h2>repo.launcher.iamrp.dev</h2>
+                    <p>Interactive schema registry, card preview gallery, and technical documentation for all 9 pluggable Hub Card modules in RPDev Launcher.</p>
+                </div>
+                <div>
+                    <div class="endpoint-pill">https://repo.launcher.iamrp.dev</div>
+                    <div class="action-link">Open Module Catalog &rarr;</div>
+                </div>
+            </a>
+
+            <!-- Edge CDN Binary Delivery -->
+            <a href="https://cdn.iamrp.dev" class="card">
+                <div>
+                    <div class="card-header">
+                        <span class="card-icon">🚀</span>
+                        <span class="badge badge-cdn">Edge CDN Delivery</span>
+                    </div>
+                    <h2>cdn.iamrp.dev</h2>
+                    <p>Sovereign edge distribution network delivering signed mobile APKs, SHA-256 checksums, documentation assets, and media blobs.</p>
+                </div>
+                <div>
+                    <div class="endpoint-pill">https://cdn.iamrp.dev/</div>
+                    <div class="action-link">Explore Edge CDN &rarr;</div>
+                </div>
+            </a>
+
+            <!-- Documentation Wiki -->
+            <a href="https://wiki.iamrp.dev" class="card">
+                <div>
+                    <div class="card-header">
+                        <span class="card-icon">📖</span>
+                        <span class="badge" style="background:#238636;">Documentation</span>
+                    </div>
+                    <h2>wiki.iamrp.dev</h2>
+                    <p>Comprehensive engineering manuals, deployment playbooks, and empirical project maturity matrices across the entire ecosystem.</p>
+                </div>
+                <div>
+                    <div class="endpoint-pill">https://wiki.iamrp.dev</div>
+                    <div class="action-link">Read Wiki Manuals &rarr;</div>
+                </div>
+            </a>
+        </div>
+
+        <footer>
+            <p>Maintained by <a href="https://iamrp.dev">RPDev</a> &bull; Project Tracking on <a href="https://github.com/orgs/RPDevs-Builds/projects/1">GitHub Projects</a> &bull; Source in <a href="https://github.com/rpdev-cdn">rpdev-cdn</a></p>
+        </footer>
+    </div>
+</body>
+</html>
