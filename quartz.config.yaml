@@ -1,0 +1,162 @@
+# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
+configuration:
+  pageTitle: RPDev Repository Hub
+  pageTitleSuffix: " | RPDev Repository Hub"
+  enableSPA: true
+  enablePopovers: true
+  analytics: null
+  locale: en-US
+  baseUrl: repo.iamrp.dev
+  ignorePatterns:
+    - private
+    - templates
+    - .obsidian
+  theme:
+    fontOrigin: local
+    cdnCaching: false
+    typography:
+      header: "JetBrains Mono"
+      body: "JetBrains Mono"
+      code: "JetBrains Mono"
+    colors:
+      lightMode:
+        light: "#000000"
+        lightgray: "#1c1c1c"
+        gray: "#767676"
+        darkgray: "#cccccc"
+        dark: "#ffffff"
+        secondary: "#00afaf"
+        tertiary: "#5fafd7"
+        highlight: rgba(0, 175, 175, 0.15)
+        textHighlight: rgba(0, 175, 175, 0.25)
+      darkMode:
+        light: "#090d13"
+        lightgray: "#161b22"
+        gray: "#8b949e"
+        darkgray: "#c9d1d9"
+        dark: "#f0f6fc"
+        secondary: "#58a6ff"
+        tertiary: "#1f6feb"
+        highlight: rgba(88, 166, 255, 0.15)
+        textHighlight: rgba(88, 166, 255, 0.25)
+
+plugins:
+  - source: "@quartz-community/created-modified-date"
+    enabled: true
+    options:
+      defaultDateType: modified
+      priority:
+        - frontmatter
+        - git
+        - filesystem
+    order: 10
+  - source: "@quartz-community/syntax-highlighting"
+    enabled: true
+    options:
+      theme:
+        light: github-light
+        dark: github-dark
+      keepBackground: false
+    order: 20
+  - source: "@quartz-community/obsidian-flavored-markdown"
+    enabled: true
+    options:
+      enableInHtmlEmbed: false
+      enableCheckbox: true
+    order: 30
+  - source: "@quartz-community/github-flavored-markdown"
+    enabled: true
+    order: 40
+  - source: "@quartz-community/table-of-contents"
+    enabled: true
+    options:
+      maxDepth: 4
+      collapseByDefault: false
+    order: 50
+  - source: "@quartz-community/crawl-links"
+    enabled: true
+    options:
+      markdownLinkResolution: shortest
+    order: 60
+  - source: "@quartz-community/description"
+    enabled: true
+    order: 70
+  - source: "@quartz-community/content-page"
+    enabled: true
+  - source: "@quartz-community/folder-page"
+    enabled: true
+    options:
+      showFolderCount: false
+  - source: "@quartz-community/tag-page"
+    enabled: true
+  - source: "@quartz-community/content-index"
+    enabled: true
+    options:
+      enableSiteMap: true
+      enableRSS: true
+  - source: "@quartz-community/alias-redirects"
+    enabled: true
+  - source: "@quartz-community/cname"
+    enabled: true
+  - source: "@quartz-community/page-title"
+    enabled: true
+    layout:
+      position: left
+      priority: 10
+  - source: "@quartz-community/search"
+    enabled: true
+    options:
+      enablePreview: true
+      fieldPriority:
+        - title
+        - tags
+        - content
+    layout:
+      position: left
+      priority: 20
+  - source: "@quartz-community/darkmode"
+    enabled: true
+    layout:
+      position: left
+      priority: 30
+  - source: "@quartz-community/explorer"
+    enabled: true
+    options:
+      title: "Distribution Points"
+      folderClickBehavior: link
+      folderDefaultState: open
+      useSavedState: true
+    layout:
+      position: left
+      priority: 50
+  - source: "@quartz-community/article-title"
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 10
+  - source: "@quartz-community/content-meta"
+    enabled: true
+    options:
+      showReadingTime: true
+      showComma: true
+    layout:
+      position: beforeBody
+      priority: 20
+  - source: "@quartz-community/backlinks"
+    enabled: true
+    layout:
+      position: right
+      priority: 20
+  - source: "@quartz-community/footer"
+    enabled: true
+    options:
+      links:
+        Portfolio: https://iamrp.dev
+        Launcher: https://launcher.iamrp.dev
+        Feed: https://feed.launcher.iamrp.dev
+        Wiki: https://wiki.iamrp.dev
+        GitHub: https://github.com/RPDevs-Builds
+        CDN: https://cdn.iamrp.dev
+    layout:
+      position: footer
+      priority: 50
